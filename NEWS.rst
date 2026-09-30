@@ -1,3 +1,15 @@
+4.65.1 (unreleased)
+-------------------
+
+- [varLib.axisReversal] Added new ``fontTools.varLib.axisReversal`` module with
+  a ``reverseAxisDirection`` function that reverses the direction of a variable
+  font axis, remapping the user-space coordinate ``x`` to ``min + max - x`` so
+  that the new font at position ``x`` looks like the original font at the
+  mirrored position. The ``fvar`` default and named instances, ``avar``
+  mapping, ``STAT`` axis values, ``gvar`` regions and the ``HVAR``/``VVAR``,
+  ``MVAR`` and ``COLRv1`` variation stores are mirrored accordingly; fonts
+  containing variation data in not-yet-supported tables are rejected.
+
 4.65.0 (released 2026-09-10)
 ----------------------------
 

@@ -20,6 +20,7 @@ Supporting modules
 .. toctree::
    :maxdepth: 1
 
+   axisReversal
    builder
    cff
    errors

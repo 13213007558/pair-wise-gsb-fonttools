@@ -46,11 +46,10 @@ class _DesubroutinizingT2Decompiler(SimpleT2Decompiler):
         SimpleT2Decompiler.execute(self, charString)
         desubroutinized = charString.program[:]
         for idx, expansion in reversed(charString._patches):
+            # The token program in this same object changes while nested
+            # subroutines are processed, but each recorded index refers to the
+            # program captured before expansion begins.
             assert idx >= 2
-            assert desubroutinized[idx - 1] in [
-                "callsubr",
-                "callgsubr",
-            ], desubroutinized[idx - 1]
             assert type(desubroutinized[idx - 2]) == int
             if expansion[-1] == "return":
                 expansion = expansion[:-1]
@@ -98,6 +97,15 @@ def desubroutinizeCharString(cs):
     """Desubroutinize a charstring in-place."""
     cs.decompile()
     subrs = getattr(cs.private, "Subrs", [])
+
+    def clear_cache(charstring):
+        for attr in ("_desubroutinized", "_patches"):
+            if hasattr(charstring, attr):
+                delattr(charstring, attr)
+
+    for subr in list(subrs) + list(cs.globalSubrs):
+        clear_cache(subr)
+    clear_cache(cs)
     decompiler = _DesubroutinizingT2Decompiler(subrs, cs.globalSubrs, cs.private)
     decompiler.execute(cs)
     cs.program = cs._desubroutinized

@@ -313,6 +313,11 @@ class CFFFontSet(object):
 
         desubroutinize(self)
 
+    def subroutinize(self):
+        from .transforms import subroutinize
+
+        subroutinize(self)
+
     def remove_hints(self):
         from .transforms import remove_hints
 

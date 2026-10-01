@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ttFont sfntVersion="OTTO" ttLibVersion="4.0">
+
+  <GlyphOrder>
+    <!-- The 'id' attribute is only for humans; it is ignored when parsed. -->
+    <GlyphID id="0" name=".notdef"/>
+    <GlyphID id="1" name="cid00001"/>
+    <GlyphID id="2" name="cid00002"/>
+    <GlyphID id="3" name="cid00003"/>
+    <GlyphID id="4" name="cid00004"/>
+  </GlyphOrder>
+
+  <head>
+    <!-- Most of this table will be recalculated by the compiler -->
+    <tableVersion value="1.0"/>
+    <fontRevision value="1.0"/>
+    <checkSumAdjustment value="0x12345678"/>
+    <magicNumber value="0x5f0f3cf5"/>
+    <flags value="00000000 00000011"/>
+    <unitsPerEm value="1000"/>
+    <created value="Sun Sep 27 00:00:00 2026"/>
+    <modified value="Sun Sep 27 00:00:00 2026"/>
+    <xMin value="0"/>
+    <yMin value="0"/>
+    <xMax value="1000"/>
+    <yMax value="1000"/>
+    <macStyle value="0"/>
+    <lowestRecPPEM value="6"/>
+    <fontDirectionHint value="2"/>
+    <indexToLocFormat value="0"/>
+    <glyphDataFormat value="0"/>
+  </head>
+
+  <hhea>
+    <tableVersion value="0x00010000"/>
+    <ascent value="900"/>
+    <descent value="-300"/>
+    <lineGap value="0"/>
+    <advanceWidthMax value="500"/>
+    <minLeftSideBearing value="0"/>
+    <minRightSideBearing value="0"/>
+    <xMaxExtent value="1000"/>
+    <caretSlopeRise value="1"/>
+    <caretSlopeRun value="0"/>
+    <caretOffset value="0"/>
+    <reserved0 value="0"/>
+    <reserved1 value="0"/>
+    <reserved2 value="0"/>
+    <reserved3 value="0"/>
+    <metricDataFormat value="0"/>
+    <numberOfHMetrics value="5"/>
+  </hhea>
+
+  <maxp>
+    <tableVersion value="0x5000"/>
+    <numGlyphs value="5"/>
+  </maxp>
+
+  <hmtx>
+    <mtx name=".notdef" width="500" lsb="0"/>
+    <mtx name="cid00001" width="300" lsb="0"/>
+    <mtx name="cid00002" width="350" lsb="0"/>
+    <mtx name="cid00003" width="400" lsb="0"/>
+    <mtx name="cid00004" width="450" lsb="0"/>
+  </hmtx>
+
+  <name>
+    <namerecord nameID="1" platformID="3" platEncID="1" langID="0x409">
+      TestSubrCID
+    </namerecord>
+    <namerecord nameID="4" platformID="3" platEncID="1" langID="0x409">
+      TestSubrCID
+    </namerecord>
+    <namerecord nameID="6" platformID="3" platEncID="1" langID="0x409">
+      TestSubrCID
+    </namerecord>
+  </name>
+
+  <post>
+    <formatType value="3.0"/>
+    <italicAngle value="0.0"/>
+    <underlinePosition value="-100"/>
+    <underlineThickness value="50"/>
+    <isFixedPitch value="0"/>
+    <minMemType42 value="0"/>
+    <maxMemType42 value="0"/>
+    <minMemType1 value="0"/>
+    <maxMemType1 value="0"/>
+  </post>
+
+  <CFF>
+    <major value="1"/>
+    <minor value="0"/>
+    <CFFFont name="TestSubrCID">
+      <ROS Registry="Adobe" Order="Identity" Supplement="0"/>
+      <FontMatrix value="0.001 0 0 0.001 0 0"/>
+      <FontBBox value="0 0 1000 1000"/>
+      <FDSelect format="3"/>
+      <FDArray>
+        <FontDict index="0">
+          <FontName value="TestSubrCID-One"/>
+          <Private>
+            <BlueValues value="-12 0 700 712"/>
+            <defaultWidthX value="500"/>
+            <nominalWidthX value="0"/>
+          </Private>
+        </FontDict>
+        <FontDict index="1">
+          <FontName value="TestSubrCID-Two"/>
+          <Private>
+            <BlueValues value="-12 0 700 712"/>
+            <defaultWidthX value="500"/>
+            <nominalWidthX value="0"/>
+          </Private>
+        </FontDict>
+      </FDArray>
+      <CharStrings>
+        <CharString name=".notdef" fdSelectIndex="0">
+          endchar
+        </CharString>
+        <CharString name="cid00001" fdSelectIndex="0">
+          300 50 100 hstem
+          60 100 vstem
+          100 100 rmoveto
+          hintmask 11110000
+          300 0 rlineto
+          0 300 rlineto
+          -300 0 rlineto
+          0 -300 rlineto
+          50 400 rmoveto
+          200 0 rlineto
+          0 200 rlineto
+          endchar
+        </CharString>
+        <CharString name="cid00002" fdSelectIndex="0">
+          350 50 400 rmoveto
+          200 0 rlineto
+          0 200 rlineto
+          endchar
+        </CharString>
+        <CharString name="cid00003" fdSelectIndex="1">
+          400 60 110 hstem
+          70 110 vstem
+          100 100 rmoveto
+          hintmask 11110000
+          300 0 rlineto
+          0 300 rlineto
+          -300 0 rlineto
+          0 -300 rlineto
+          60 450 rmoveto
+          150 0 rlineto
+          0 150 rlineto
+          endchar
+        </CharString>
+        <CharString name="cid00004" fdSelectIndex="1">
+          450 60 450 rmoveto
+          150 0 rlineto
+          0 150 rlineto
+          endchar
+        </CharString>
+      </CharStrings>
+    </CFFFont>
+
+    <GlobalSubrs>
+      <!-- The 'index' attribute is only for humans; it is ignored when parsed. -->
+    </GlobalSubrs>
+  </CFF>
+
+</ttFont>
